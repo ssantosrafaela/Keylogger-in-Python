@@ -6,8 +6,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 try:
-    fromaddr = "leticiademarcco@live.com"
-    toaddr = 'botjava@outlook.pt'
+    fromaddr = "" ##e-mail
+    toaddr = '' #e-mail criado
     msg = MIMEMultipart()
 
     msg['From'] = fromaddr 
@@ -34,7 +34,7 @@ try:
 
     server = smtplib.SMTP('smtp.outlook.com', 587)
     server.starttls()
-    server.login(fromaddr, "Lele4321")
+    server.login(fromaddr, "") ##senha
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
